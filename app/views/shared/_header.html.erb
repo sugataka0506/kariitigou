@@ -4,7 +4,11 @@
         <div class="col-7"><h1>逆求人サイト　わがまま</h1></div>
         <div class="col-5">
             <div class="d-flex flex-row-reverse">
-                <a href="#" class="btn btn-light text-">ログイン</a>
+                <% if user_signed_in? %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-light' %>
+                <% else %>
+                  <%= link_to "ログイン", new_user_session_path, class: 'btn btn-light' %>
+                <% end %>
                 <a href="#" class="btn btn-danger">プロフィール</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: black">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
