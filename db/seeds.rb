@@ -13,3 +13,8 @@
   user.password = 'password'
   user.save!
 end
+
+
+["エンジニア", "月給25万以上", "金", "動物", "業界", "人", "地方", "国", "地球", "数字", "飲み物", "お菓子", "コップ", "携帯", "趣味", "ぺん", "本", "野菜", "鋼", "歌"].each do |name|
+  Tag.find_or_create_by(name: name)
+end
