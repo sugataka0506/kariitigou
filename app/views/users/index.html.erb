@@ -1,38 +1,9 @@
 
 <div class="container">
   <div class="my-3">
-    <span class="badge bg-light text-dark">エンジニア</span><span class="badge bg-secondary">110</span>
-    <span class="badge bg-light text-dark">月給25万以上</span><span class="badge bg-secondary">102</span>
-    <span class="badge bg-light text-dark">週４</span><span class="badge bg-secondary">82</span>
-    <span class="badge bg-light text-dark">土日休み</span><span class="badge bg-secondary">74</span>
-    <span class="badge bg-light text-dark">日商簿記二級</span><span class="badge bg-secondary">65</span>
-    <span class="badge bg-light text-dark">サービス業</span><span class="badge bg-secondary">57</span>
-    <span class="badge bg-light text-dark">配達</span><span class="badge bg-secondary">55</span>
-    <span class="badge bg-light text-dark">シフト制</span><span class="badge bg-secondary">49</span>
-    <span class="badge bg-light text-dark">残業10時間以内</span><span class="badge bg-secondary">45</span>
-    <span class="badge bg-light text-dark">昼出勤</span><span class="badge bg-secondary">41</span>
-    <span class="badge bg-light text-dark">週２０時間</span><span class="badge bg-secondary">40</span>
-    <span class="badge bg-light text-dark">時給２０００円以上</span><span class="badge bg-secondary">40</span>
-    <span class="badge bg-light text-dark">事務</span><span class="badge bg-secondary">38</span>
-    <span class="badge bg-light text-dark">子供</span><span class="badge bg-secondary">33</span>
-    <button type="button" class="btn btn-light text-dark">
-      海外<span class="badge bg-secondary">24</span>
-    </button>
-    <button type="button" class="btn btn-light text-dark">
-      出張無し<span class="badge bg-secondary">23</span>
-    </button>
-    <button type="button" class="btn btn-light text-dark">
-      営業<span class="badge bg-secondary">21</span>
-    </button>
-    <button type="button" class="btn btn-light text-dark">
-      バス<span class="badge bg-secondary">16</span>
-    </button>
-    <button type="button" class="btn btn-light text-dark">
-      動物<span class="badge bg-secondary">12</span>
-    </button>
-    <button type="button" class="btn btn-light text-dark">
-      自然<span class="badge bg-secondary">11</span>
-    </button>
+    <% @tags.each do |tag| %>
+      <span class="badge bg-light text-dark"><%= tag.name %></span><span class="badge bg-secondary">110</span>
+    <% end %>
   </div>
   <div class="row">
     <% @users.each do |user| %>
