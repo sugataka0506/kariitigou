@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20210716131154) do
     t.string   "image"
     t.string   "description"
     t.string   "region"
-    t.string   "user_type"
+    t.boolean  "job_seeker"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -18,7 +18,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :image
       t.string :description
       t.string :region
-      t.string :user_type
+      t.boolean :job_seeker
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
