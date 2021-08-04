@@ -4,10 +4,9 @@
     <hr>
     
     <%= image_tag(@user.image_url, width: '200') if @user.image? %>
-    <div class="input-group mb-3">
-  <input type="file" class="form-control" id="inputGroupFile02">
-  <label class="input-group-text" for="inputGroupFile02">Upload</label>
-</div>
+    
+
+
     
     <hr>
     
@@ -22,26 +21,19 @@
     <hr> 
     
     <h5>やってきたこと</h5>
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">やってきたこと</label>
-    </div>
+    <p><%= h(@user.description).gsub(/\R/, "<br>").html_safe %></p>
     
     <hr>
     <h5>伝えたいこと</h5>
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">伝えたいこと</label>
-    </div>
-    
+    <p><%=  h(@user.opinion).gsub(/\R/, "<br>").html_safe %></p>
     <hr>
     
     <h5>登録メールアドレス</h5>
-    <input class="form-control" type="text"  aria-label="default input example">
+    <p><%= @user.email %></p>
     
     <hr>
     <h5>生年月日</h5>
-   
+    <p><%= @user.birthday.strftime("%Y/%-m/%-d") %></p>
       
 
     <hr>
