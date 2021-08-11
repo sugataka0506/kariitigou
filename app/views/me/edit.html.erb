@@ -4,7 +4,7 @@
     <hr>
     
     <h5>プロフィール画像</h5>
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, url: me_path) do |f| %>
     <%= image_tag(@user.image_url, width: '200') if @user.image? %>
      
     <%= f.file_field :image %>
