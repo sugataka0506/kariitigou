@@ -49,7 +49,7 @@
        
 
     <div class="d-grid gap-2">
-      <button class="btn btn-success" type="button">会話する</button>
+      <%= link_to("会話する","/users/#{@user.id}/chats", class: 'btn btn-success') %>
     </div>
     
 </div>
