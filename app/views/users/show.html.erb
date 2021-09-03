@@ -1,0 +1,55 @@
+<div class="container">
+    <%= image_tag(@user.image_url, width: '200') if @user.image? %>
+    <h2><%= @user.name %></h2>
+      <span class="badge bg-light text-dark">エンジニア</span><span class="badge bg-secondary"></span>
+   
+     <span class="badge bg-light text-dark">週４</span><span class="badge bg-secondary"></span>
+     <button type="button" class="btn btn-light text-dark">
+          海外<span class="badge bg-secondary"></span>
+     </button>
+     
+     <button type="button" class="btn btn-light text-dark">
+          出張無し<span class="badge bg-secondary"></span>
+     </button>
+      <span class="badge bg-light text-dark">エンジニア</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">月給25万以上</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">週４</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">土日休み</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">日商簿記二級</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">サービス業</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">配達</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">シフト制</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">残業10時間以内</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">昼出勤</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">週２０時間</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">時給２０００円以上</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">事務</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">月給25万以上</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">週４</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">土日休み</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">日商簿記二級</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">サービス業</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">配達</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">シフト制</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">残業10時間以内</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">昼出勤</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">週２０時間</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">時給２０００円以上</span><span class="badge bg-secondary"></span>
+        <span class="badge bg-light text-dark">事務</span><span class="badge bg-secondary"></span>
+           
+           
+        <hr>
+        <h5>やってきたこと</h5>
+        <p><%= h(@user.description).gsub(/\R/, "<br>").html_safe %></p>
+    
+        <hr>
+        <h5>伝えたいこと</h5>
+        <p><%=  h(@user.opinion).gsub(/\R/, "<br>").html_safe %></p>
+        <hr>
+       
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-success" type="button">会話する</button>
+    </div>
+    
+</div>

@@ -16,7 +16,7 @@
                 <div class="col-8"><h5 class="card-title"><%= user.name %></h5></div>
             </div>
             <p class="card-text"><span class="badge bg-light text-dark">土日休み</span><span class="badge bg-light text-dark">契約社員</span><span class="badge bg-light text-dark">猫</span></p>
-            <a href="#" class="btn btn-primary">詳細を見る</a>
+            <%= link_to("詳細を見る","/users/#{user.id}", class: 'btn btn-primary') %>
           </div>
         </div>
       </div>
