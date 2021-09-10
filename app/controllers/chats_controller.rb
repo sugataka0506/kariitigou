@@ -1,13 +1,13 @@
 class ChatsController < ApplicationController
   before_filter :authenticate_user!
      def index
-        @users = User.where.not(id: current_user.id)
-        @tags = Tag.all
+         @receiver_id = params[:id]
      end
      def create
-        @users =User.new(content: params[:content])
-        @post.save
-        redirect_to("/chats/index")
+        @chat =Chat.new(content: params[:content], sender_id: current_user.id,receiver_id: params[:id])
+        @chat.save
+        redirect_to("/users/#{params[:id]}/chats")
      end
+     
   private
 end

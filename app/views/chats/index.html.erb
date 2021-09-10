@@ -20,10 +20,11 @@
     </div>
   </div>
   
-  <form class="form-inline">
+  <%= form_tag ("/users/#{@receiver_id}/chats") do %> 
     <div class="form-group mr-3">
-      <textarea rows="5" class="form-control" id="InputAsk"></textarea>
+      <textarea name="content" rows="5" class="form-control" id="InputAsk"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">送信</button>
-  </form>
+
+  <% end %>
 </div>
