@@ -8,18 +8,18 @@
       </div>
     </div>
   </div>
-  
+ <% @chats.each do |chat|  %>   
   <div class="row">
     <div class="col-6"></div>
     <div class="col-6">
       <div class="card my-2">
         <div class="card-body text-end">
-          This is some text within a card body.
+         <%= chat.content %>
         </div>
       </div>
     </div>
   </div>
-  
+ <% end %> 
   <%= form_tag ("/users/#{@receiver_id}/chats") do %> 
     <div class="form-group mr-3">
       <textarea name="content" rows="5" class="form-control" id="InputAsk"></textarea>

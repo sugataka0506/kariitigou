@@ -2,6 +2,7 @@ class ChatsController < ApplicationController
   before_filter :authenticate_user!
      def index
          @receiver_id = params[:id]
+         @chats = Chat.all
      end
      def create
         @chat =Chat.new(content: params[:content], sender_id: current_user.id,receiver_id: params[:id])
