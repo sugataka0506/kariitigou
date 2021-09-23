@@ -63,7 +63,9 @@
               出張無し<span class="badge bg-secondary">23</span>
          </button>
          <button type="button" class="btn-close" aria-label="Close"></button>
-        <input class="form-control" type="text"  aria-label="default input example">
-        <button type="button" class="btn btn-primary btn-sm">追加する</button>
+        <%= form_tag("/user_tags/create", method: "post", remote: true) do %>
+            <input class="form-control" type="text"  name="tag_name" aria-label="default input example">
+            <button type="submit" class="btn btn-primary btn-sm">追加する</button>
+        <% end %>
         <hr> 
 </div>
