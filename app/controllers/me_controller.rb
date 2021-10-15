@@ -6,6 +6,7 @@ class MeController < ApplicationController
   end
   def edit
     @user = current_user
+    @tags = @user.tags
   end
   def update
     @user = current_user
