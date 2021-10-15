@@ -51,11 +51,13 @@
     <hr>
 
     <h5>タグ編集</h5>
-     <% @tags.each do |tag| %>
+     <% @user_tags.each do |user_tag| %>
        <span class="badge bg-light text-dark">
-         <%= tag.name %>  
-       </span><span class="badge bg-secondary"><%= tag.user_tags.count %></span>
-       <button type="button" class="btn-close" aria-label="Close"></button>
+         <%= user_tag.tag.name %>  
+       </span><span class="badge bg-secondary"><%= user_tag.tag.user_tags.count %></span>
+       <%= link_to user_tag_path(user_tag.id), method: 'delete' do %>
+           <button type="button" class="btn-close" aria-label="Close"></button>
+        <% end %>
      <% end %>
          
         <%= form_tag("/user_tags/create", method: "post", remote: true) do %>

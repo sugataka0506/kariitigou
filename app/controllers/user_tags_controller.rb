@@ -13,9 +13,10 @@ class UserTagsController < ApplicationController
       end
       redirect_to("/me/edit")
     end
+    
     def destroy
-        @user = current_user
-        @user.destroy
-        redirect_to("/me/edit")
+      user_tag = UserTag.find(params[:id])
+      user_tag.destroy
+      redirect_to("/me/edit")
     end 
 end

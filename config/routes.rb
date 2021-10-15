@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   post "me/edit" => "me#edit"
   post "me/destroy" => "me#destroy"
   post "user_tags/create" => "user_tags#create"
+  resources :user_tags, only: [:destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
