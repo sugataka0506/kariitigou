@@ -2,7 +2,9 @@
 <div class="container">
   <div class="my-3">
     <% @tags.each do |tag| %>
-      <span class="badge bg-light text-dark"><%= tag.name %></span><span class="badge bg-secondary">110</span>
+      <%= link_to tag_users_path(taggit ) do %>
+        <span class="badge bg-light text-dark"><%= tag.name %></span><span class="badge bg-secondary"><%= tag.user_tags.count %></span>
+      <% end %>
     <% end %>
   </div>
   <div class="row">
