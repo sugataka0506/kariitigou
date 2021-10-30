@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  #authenticate_user!は、ログインしていない場合にログインページにリダイレクトさせるヘルパーメソッドです。
   before_filter :authenticate_user!
   
   def index
